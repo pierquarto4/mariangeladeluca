@@ -1,0 +1,70 @@
+/* Stile condiviso da tutte le pagine. Per cambiare lo sfondo o il blu, modifica i colori qui sotto. */
+:root{--carta:#FBEFEF;--inchiostro:#1C2226;--grigio:#675B5F;--blu:#26466B;--blu-tenue:#EFD9DC;--linea:#E8D3D5;--testata:76px;
+--serif:"Cormorant Garamond",Garamond,"Times New Roman",serif;--sans:"Work Sans","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--carta);color:var(--inchiostro);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--blu);outline-offset:3px}
+img{max-width:100%;display:block}
+p{margin:0 0 1.1em}
+.testata{display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;padding:1rem clamp(1.25rem,3vw,2.5rem);background:var(--carta);border-bottom:1px solid var(--linea);position:relative;z-index:5;flex-wrap:wrap}
+.nome{font-family:var(--serif);font-size:1.65rem;font-weight:500;text-decoration:none;line-height:1}
+.menu ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem 1.1rem}
+.menu a{text-decoration:none;font-size:.95rem;color:var(--grigio);padding:.2rem 0;border-bottom:1px solid transparent}
+.menu a:hover{color:var(--inchiostro)}
+.menu a[aria-current="page"]{color:var(--inchiostro);border-bottom-color:var(--blu)}
+.ritratto{margin:0;background:var(--blu-tenue);position:relative;overflow:hidden;aspect-ratio:4/5}
+.ritratto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+main{padding:clamp(2.25rem,6vw,4.5rem) clamp(1.25rem,5vw,4.5rem) 2.5rem}
+.pagina{max-width:46rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.5rem,4.2vw,3.5rem);line-height:1.05;margin:0 0 1.5rem}
+h3{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.2;margin:0 0 .25rem}
+.frase{font-size:clamp(2.1rem,3.5vw,3.5rem);line-height:1.14;max-width:19ch;margin:0}
+.intro{font-size:1.1rem;max-width:36rem;margin-bottom:2.75rem}
+.testo{max-width:36rem}
+.meta{font-size:.85rem;color:var(--grigio)}
+.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(14.5rem,1fr));gap:2.75rem 1.75rem}
+.riquadro,.libro{text-decoration:none;display:block}
+.riquadro .immagine{position:relative;aspect-ratio:3/2;background:var(--blu);overflow:hidden;margin-bottom:.9rem}
+.riquadro .immagine img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.riquadro .tipo{position:absolute;left:1rem;bottom:.8rem;color:var(--carta);font-family:var(--serif);font-style:italic;font-size:1.3rem}
+.riquadro:hover h3,.libro:hover h3,.articolo h3 a:hover{text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px}
+.riquadro p{font-size:.95rem;margin:.45rem 0 0}
+.scaffale{display:grid;grid-template-columns:repeat(auto-fill,minmax(10.5rem,1fr));gap:2.5rem 1.75rem}
+.copertina{position:relative;aspect-ratio:2/3;background:var(--blu);margin-bottom:.9rem;box-shadow:inset 6px 0 0 rgba(0,0,0,.18)}
+.copertina img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.copertina span{position:absolute;inset:0;padding:1.1rem 1rem 1rem 1.3rem;color:var(--carta);font-family:var(--serif);font-size:1.35rem;line-height:1.15}
+.acquista{display:inline-block;margin-top:.4rem;font-size:.9rem;color:var(--blu);text-decoration:underline;text-underline-offset:.25em;text-decoration-thickness:1px}
+.invito{background:var(--blu);color:var(--carta);padding:1.4rem 1.6rem;margin:0 0 2.75rem;max-width:36rem}
+.invito p{margin:0 0 .6rem}
+.invito a{color:var(--carta);font-weight:500;text-underline-offset:.25em}
+.articolo{display:grid;grid-template-columns:6.5rem 1fr;gap:.25rem 1.5rem;padding:1.6rem 0;border-top:1px solid var(--linea)}
+.articolo h3 a{text-decoration:none}
+.estratto{margin:.5rem 0 0;font-size:.97rem}
+.abbonati{display:inline-block;margin-left:.5rem;font-family:var(--sans);font-size:.75rem;font-weight:500;color:var(--blu);border:1px solid var(--blu);border-radius:999px;padding:.05rem .55rem;vertical-align:.2em;white-space:nowrap}
+.puntata{padding:1.9rem 0;border-top:1px solid var(--linea)}
+.puntata iframe{width:100%;height:152px;border:0;border-radius:12px;margin:.9rem 0 .4rem;display:block}
+.ascolta{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-size:.92rem;margin-top:.6rem}
+.ascolta a{color:var(--blu);text-underline-offset:.25em;text-decoration-thickness:1px}
+.email{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.4rem);color:var(--blu);text-underline-offset:.18em;text-decoration-thickness:1px;word-break:break-word}
+.piede{padding:1.5rem clamp(1.25rem,5vw,4.5rem) 1.75rem;font-size:.92rem;color:var(--grigio)}
+.piede-dentro{max-width:46rem;border-top:1px solid var(--linea);padding-top:1.1rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 1.5rem}
+.piede .social{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem}
+.piede a{color:var(--grigio);text-underline-offset:.25em;text-decoration-thickness:1px}
+.piede a:hover{color:var(--inchiostro)}
+.copyright{font-size:.82rem}
+@media (min-width:900px){
+  body{min-height:100vh;display:flex;flex-direction:column}
+  .testata{position:fixed;top:0;left:0;right:0;height:var(--testata);flex-wrap:nowrap;padding-top:0;padding-bottom:0;view-transition-name:testata}
+  .ritratto{position:fixed;top:var(--testata);bottom:0;left:0;width:42%;aspect-ratio:auto;view-transition-name:ritratto}
+  body.interna .ritratto{left:58%}
+  main{flex:1;padding-top:calc(var(--testata) + 4rem);margin-left:42%}
+  .piede{margin-left:42%}
+  body.interna main,body.interna .piede{margin-left:0;margin-right:42%}
+  body.home main{display:flex;flex-direction:column;justify-content:center}
+}
+@media (max-width:560px){.articolo{grid-template-columns:1fr}}
+/* Passaggio da una pagina all'altra: la foto scivola e si dissolve nell'altra (browser recenti) */
+@view-transition{navigation:auto}
+::view-transition-group(ritratto){animation-duration:.9s;animation-timing-function:cubic-bezier(.65,0,.35,1)}
+@media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
