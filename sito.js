@@ -23,7 +23,7 @@ const SITO = {
   // Compaiono in fondo a ogni pagina. Metti gli indirizzi veri.
   social: [
     ["Instagram", "https://instagram.com/larossa.pinta"],
-    ["Substack", "https://substack.com"]
+    ["Substack", "https://larossapinta.substack.com"]
   ]
 };
 
